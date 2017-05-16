@@ -1,0 +1,6 @@
+{
+	"releaseDate" : "@releaseDate@",
+	"previousReleaseDate" : "@previousReleaseDate@",
+	"previousReleaseLink" : "https://raw.githubusercontent.com/DSATool/MeasurementsPlugin/master/release/Measurements_@previousReleaseDate@.zip",
+	"updateInfo" : "https://raw.githubusercontent.com/DSATool/MeasurementsPlugin/master/release/update-info.json"
+}

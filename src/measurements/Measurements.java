@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2017 DSATool team
  *
@@ -14,9 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package measurements;
+
 import dsatool.gui.Main;
 import dsatool.plugins.Plugin;
-import measurements.MeasurementsController;
 
 /**
  * A plugin for providing conversion between different units of measurement

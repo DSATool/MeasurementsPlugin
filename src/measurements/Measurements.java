@@ -47,10 +47,10 @@ public class Measurements extends Plugin {
 	@Override
 	public void initialize() {
 		Main.addDetachableToolComposite("DSA", "Maße", 300, 200, () -> {
-			getNotifications = true;
-
 			controller = new MeasurementsController();
 			controller.load();
+
+			getNotifications = true;
 
 			return controller.getPane();
 		});
@@ -63,8 +63,6 @@ public class Measurements extends Plugin {
 	 */
 	@Override
 	public void load() {
-		if (controller != null) {
-			controller.load();
-		}
+		controller.load();
 	}
 }

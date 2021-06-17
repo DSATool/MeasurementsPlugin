@@ -52,7 +52,7 @@ public class MeasurementsController {
 		final double[] currentFactor = new double[1];
 		final DecimalFormat d = new DecimalFormat("#,###.##########");
 
-		final Consumer<Double> update = (newValue) -> {
+		final Consumer<Double> update = newValue -> {
 			for (int i = 0; i < labels.size(); ++i) {
 				labels.get(i).setText(d.format(newValue * currentFactor[0] / factors.get(i)));
 			}
@@ -102,7 +102,7 @@ public class MeasurementsController {
 				final double factor = category.getDouble(unitName);
 
 				final Button unitButton = new Button(unitName);
-				unitButton.setOnAction((event) -> {
+				unitButton.setOnAction(event -> {
 					inputUnit.setText(unitName);
 					currentFactor[0] = factor;
 					update.accept(Double.parseDouble(input.getText()));

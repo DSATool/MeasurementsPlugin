@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 import dsatool.resources.ResourceManager;
+import dsatool.util.Util;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -50,7 +51,7 @@ public class MeasurementsController {
 		final List<Label> labels = new ArrayList<>();
 		final List<Double> factors = new ArrayList<>();
 		final double[] currentFactor = new double[1];
-		final DecimalFormat d = new DecimalFormat("#,###.##########");
+		final DecimalFormat d = new DecimalFormat("#,###.##########", Util.decimalFormatSymbols);
 
 		final Consumer<Double> update = newValue -> {
 			for (int i = 0; i < labels.size(); ++i) {
